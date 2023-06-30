@@ -6,8 +6,9 @@
  *
  *@dest: pointer to destination input
  *@src: pointer to source input
+ *@n1: most number of bytes from @src
  *
- * Return: pointer to resulting string @dest
+ * Return: @dest
 */
 
 char *_strcat(char *dest, char *src, int n)
@@ -23,7 +24,7 @@ char *_strcat(char *dest, char *src, int n)
 	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[c + i] = src[i];
 
-	dest[c + i] = '\0';
+	dest[c + i] = '\0'i;
 
 	return (dest);
 }
