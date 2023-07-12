@@ -3,7 +3,7 @@
 
 /**
  * main-prints the minimum number of coins
- * to make change gor ana amount of money
+ * to make change for ana amount of money
  * @argc:number of comandline arguments
  * @argv:pointer to an array of command line argumets
  * Return:0-success, non-zero-fail
@@ -13,14 +13,14 @@ int main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
-		int i, leastcents = 0, money = atoi(argv[i]);
+		int i, leastcents = 0, money = atoi(argv[1]);
 		int cents[] = {25, 10, 5, 2, 1};
 
 		for (i = 0; i < 5; i++)
 		{
 			if (money >= cents[i])
 			{
-				leastcents += money / centa[i];
+				leastcents += money / cents[i];
 				money = money % cents[i];
 				if (money % cents[i] == 0)
 				{
