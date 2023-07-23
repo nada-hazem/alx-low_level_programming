@@ -6,7 +6,7 @@
  * @n: the number of arguments
  * @...: the integers to print
  *
- * Return: voif
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -25,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("\n");
 		return;
 	}
-	va_string(ap, n);
+	va_start(ap, n);
 	while (i--)
 		printf("%d%s", va_arg(ap, int),
 				i ? (separator ? separator : "") : "\n");
