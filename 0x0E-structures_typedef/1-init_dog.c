@@ -3,11 +3,11 @@
 /**
  * int_dog - initialize a dog
  * @d: the dog to init
- * @name: dog's name
+ * @name: the dog's name
  * @age: dog's age
  * @owner: owner's name
  *
- * Return: void
+ * Return: void.
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
