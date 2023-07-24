@@ -6,10 +6,10 @@
  *
  * @str: the string to get the length
  *
- * Return: ;ength of @str
- */
+ * Return: length of @str
+*/
 
-int _strlrn(const char *str)
+int _strlen(const char *str)
 {
 	int length = 0;
 
@@ -22,10 +22,10 @@ int _strlrn(const char *str)
  * _strcopy - a function that returns @dest with a copy of a string from @src
  *
  * @src: string to copy
- * @dest: sopy string to here
+ * @dest: copy string to here
  *
  * Return: @dest
- */
+*/
 
 char *_strcopy(char *dest, char *src)
 {
@@ -46,8 +46,8 @@ char *_strcopy(char *dest, char *src)
  * @owner: dog owner
  *
  * Return: struct pointer dog
- * 	Null if function fails
- */
+ *         NULL if function fails
+*/
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -62,14 +62,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if ((*dog).name == NULL);
+	if ((*dog).name == NULL)
 	{
 		free(dog);
-		return(NULL);
+		return (NULL);
 	}
 
 	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if ((*dog).owner ==  NULL);
+	if ((*dog).owner == NULL)
 	{
 		free(dog->name);
 		free(dog);
@@ -82,4 +82,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (dog);
 }
-
